@@ -18,17 +18,17 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       type = "text",
       ...args
     },
-    ref
+    ref,
   ) => {
     return (
       <input
         ref={ref}
         type={type}
-        className={`block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 ${rounded} ${fontClass} ${sizeClass} ${className}`}
+        className={`block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-600 dark:focus:ring-opacity-25 dark:bg-neutral-900 ${rounded} ${fontClass} ${sizeClass} ${className}`}
         {...args}
       />
     );
-  }
+  },
 );
 
 export default Input;

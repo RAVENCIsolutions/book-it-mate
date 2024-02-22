@@ -61,7 +61,7 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 focus:outline-none ${
                 open ? "!border-primary-500 " : ""
               }`}
             >
@@ -110,7 +110,7 @@ const TabFilters = () => {
         {({ open, close }) => (
           <>
             <Popover.Button
-              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-6000 focus:outline-none ${
+              className={`flex items-center justify-center px-4 py-2 text-sm rounded-full border border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 focus:outline-none ${
                 open ? "!border-primary-500 " : ""
               }`}
             >
@@ -169,7 +169,7 @@ const TabFilters = () => {
             >
               <span>
                 {`$${convertNumbThousand(
-                  rangePrices[0]
+                  rangePrices[0],
                 )} - $${convertNumbThousand(rangePrices[1])}`}{" "}
               </span>
               {renderXClear()}
@@ -288,7 +288,7 @@ const TabFilters = () => {
       name: string;
       description?: string;
       defaultChecked?: boolean;
-    }[]
+    }[],
   ) => {
     const list1 = data.filter((_, i) => i < data.length / 2);
     const list2 = data.filter((_, i) => i >= data.length / 2);

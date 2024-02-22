@@ -124,7 +124,7 @@ const TabFilters = () => {
                     "bg-neutral-50 dark:bg-neutral-900 rounded-xl p-3 space-y-8 focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
                   }
                 >
-                  <span className=" text-neutral-6000 dark:text-neutral-300 text-sm">
+                  <span className=" text-neutral-600 dark:text-neutral-300 text-sm">
                     {idx ? " Tokyo to Singapore" : " Singapore to Tokyo"}
                   </span>
                   <div></div>
@@ -158,7 +158,7 @@ const TabFilters = () => {
                                   ...posts,
                                   Departure: val as [number, number],
                                 },
-                              }
+                              },
                         )
                       }
                       allowCross={false}
@@ -193,7 +193,7 @@ const TabFilters = () => {
                                   ...posts,
                                   Arrival: val as [number, number],
                                 },
-                              }
+                              },
                         )
                       }
                       allowCross={false}
@@ -481,7 +481,7 @@ const TabFilters = () => {
             >
               <span>
                 {`$${convertNumbThousand(
-                  rangePrices[0]
+                  rangePrices[0],
                 )} - $${convertNumbThousand(rangePrices[1])}`}{" "}
               </span>
               {renderXClear()}
@@ -600,7 +600,7 @@ const TabFilters = () => {
       name: string;
       description?: string;
       defaultChecked?: boolean;
-    }[]
+    }[],
   ) => {
     const list1 = data.filter((_, i) => i < data.length / 2);
     const list2 = data.filter((_, i) => i >= data.length / 2);

@@ -1,17 +1,20 @@
 "use client";
 
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { PathName } from "@/routers/types";
+import { usePathname } from "next/navigation";
+
+import { Popover, Transition } from "@headlessui/react";
+import { useThemeMode } from "@/utils/useThemeMode";
+
 import {
   ShoppingBagIcon as ShoppingCartIcon,
   Cog8ToothIcon as CogIcon,
 } from "@heroicons/react/24/outline";
-import { Popover, Transition } from "@headlessui/react";
-import { PathName } from "@/routers/types";
-import Link from "next/link";
+
 import Header from "./Header";
 import Header3 from "./Header3";
-import { usePathname } from "next/navigation";
-import { useThemeMode } from "@/utils/useThemeMode";
 
 export type SiteHeaders = "Header 1" | "Header 2" | "Header 3";
 
@@ -134,7 +137,7 @@ const SiteHeader = () => {
             {({ open }) => (
               <>
                 <Popover.Button
-                  className={`p-2.5 bg-white hover:bg-neutral-100 dark:bg-primary-6000 dark:hover:bg-primary-700 rounded-xl shadow-xl border border-neutral-200 dark:border-primary-6000 z-10 focus:outline-none ${
+                  className={`p-2.5 bg-white hover:bg-neutral-100 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-xl shadow-xl border border-neutral-200 dark:border-primary-600 z-10 focus:outline-none ${
                     open ? " focus:ring-2 ring-primary-500" : ""
                   }`}
                 >
@@ -155,20 +158,6 @@ const SiteHeader = () => {
                         <span className="text-xl font-semibold">Customize</span>
                         <div className="w-full border-b border-neutral-200 dark:border-neutral-700 mt-4"></div>
                         {renderRadioHeaders()}
-                        {renderRadioHomePages()}
-                      </div>
-                      <div className="bg-gray-50 dark:bg-white/5 p-5">
-                        <a
-                          className="flex items-center justify-center w-full px-4 py-2 !rounded-xl text-sm font-medium bg-primary-6000 text-white hover:bg-primary-700"
-                          href={
-                            "https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526"
-                          }
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ShoppingCartIcon className="w-4 h-4" />
-                          <span className="ml-2">Buy this template</span>
-                        </a>
                       </div>
                     </div>
                   </Popover.Panel>
@@ -183,27 +172,19 @@ const SiteHeader = () => {
 
   const renderHeader = () => {
     let headerClassName = "shadow-sm dark:border-b dark:border-neutral-700";
+
     if (PAGES_HIDE_HEADER_BORDER.includes(pathname as PathName)) {
       headerClassName = isTopOfPage
         ? ""
         : "shadow-sm dark:border-b dark:border-neutral-700";
     }
-    switch (headerSelected) {
-      case "Header 1":
-        return <Header className={headerClassName} navType="MainNav1" />;
-      case "Header 2":
-        return <Header className={headerClassName} navType="MainNav2" />;
-      case "Header 3":
-        return <Header3 className={headerClassName} />;
 
-      default:
-        return <Header3 className={headerClassName} />;
-    }
+    return <Header className={headerClassName} />;
   };
 
   return (
     <>
-      {renderControlSelections()}
+      {/*{renderControlSelections()}*/}
       {renderHeader()}
       <div ref={anchorRef} className="h-1 absolute invisible"></div>
     </>
