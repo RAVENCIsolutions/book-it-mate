@@ -4,6 +4,7 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   fontClass?: string;
   desc?: ReactNode;
   isCenter?: boolean;
+  type?: "type1" | "type2";
 }
 
 const Heading: React.FC<HeadingProps> = ({
@@ -11,14 +12,31 @@ const Heading: React.FC<HeadingProps> = ({
   desc = "Discover the most outstanding articles in all topics of life. ",
   className = "mb-10 text-neutral-900 dark:text-neutral-50",
   isCenter = false,
+  type = "type1",
   ...args
 }) => {
+  let headingOrder = "";
+
+  switch (type) {
+    case "type1":
+      headingOrder = "flex-col";
+      break;
+    case "type2":
+      headingOrder = "flex-col-reverse";
+      break;
+
+    default:
+      headingOrder = "flex-col";
+  }
+
   return (
     <div className={`nc-Section-Heading relative ${className}`}>
       <div
-        className={
-          isCenter ? "text-center w-full max-w-2xl mx-auto mb-4" : "max-w-2xl"
-        }
+        className={`flex ${headingOrder}
+          ${
+            isCenter ? "text-center w-full max-w-2xl mx-auto mb-4" : "max-w-2xl"
+          }
+        `}
       >
         <h2 className={`text-3xl md:text-4xl font-semibold`} {...args}>
           {children || `Section Heading`}

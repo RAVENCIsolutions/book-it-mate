@@ -1,8 +1,10 @@
 "use client";
 
 import React, { FC, useEffect, useState } from "react";
-import AnyReactComponent from "@/components/AnyReactComponent/AnyReactComponent";
+
 import GoogleMapReact from "google-map-react";
+
+import AnyReactComponent from "@/components/AnyReactComponent/AnyReactComponent";
 import { DEMO_STAY_LISTINGS } from "@/data/listings";
 import ButtonClose from "@/shared/ButtonClose";
 import Checkbox from "@/shared/Checkbox";
@@ -78,7 +80,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
               defaultZoom={12}
               defaultCenter={DEMO_STAYS[0].map}
               bootstrapURLKeys={{
-                key: "AIzaSyAGVJfZMAKYfZ71nzL_v5i3LjTTWnCYwTY",
+                key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
               }}
               yesIWantToUseGoogleMapApiInternals
             >

@@ -21,8 +21,8 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
             Australia's own holiday guru
           </h2>
           <span className="text-base md:text-lg text-neutral-500 dark:text-neutral-400">
-            Accompanying us, you have a trip full of experiences. With Chisfis,
-            booking accommodation, resort villas, hotels
+            Discover Australia's hidden gems and breathtaking retreats with Book
+            It Mate, your gateway to unforgettable holiday experiences
           </span>
           <ButtonPrimary href="/listing-stay-map" sizeClass="px-5 py-4 sm:px-7">
             Start your search
@@ -33,7 +33,7 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
         </div>
       </div>
 
-      <div className="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full">
+      <div className="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-52 w-full">
         <HeroSearchForm />
       </div>
     </div>

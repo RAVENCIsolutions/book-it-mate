@@ -5,6 +5,7 @@ import SectionMagazine5 from "./SectionMagazine5";
 import SectionLatestPosts from "./SectionLatestPosts";
 import BgGlassmorphism from "@/components/BgGlassmorphism";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
+import Link from "next/link";
 
 // DEMO DATA
 const POSTS = DEMO_POSTS;
@@ -18,6 +19,7 @@ const BlogPage: React.FC = () => {
     <div className="nc-BlogPage overflow-hidden relative">
       {/* ======== BG GLASS ======== */}
       <BgGlassmorphism />
+
       {/* ======== ALL SECTIONS ======== */}
       {/* ======= START CONTAINER ============= */}
       <div className="container relative">
@@ -26,8 +28,19 @@ const BlogPage: React.FC = () => {
           <SectionMagazine5 posts={MAGAZINE1_POSTS} />
         </div>
 
-        {/* === SECTION 1 === */}
-        <SectionAds />
+        <div className={`pt-10 pb-6 bg-primary-500 rounded-3xl text-center`}>
+          <p className={`text-xl text-white`}>
+            Want to contribute to our magazine?
+          </p>
+          <Link
+            className={`text-secondary-500 font-bold tracking-wider uppercase`}
+            href={`/`}
+          >
+            Let us know
+          </Link>
+        </div>
+
+        {/*<SectionAds />*/}
 
         {/* === SECTION 8 === */}
         <SectionLatestPosts className="py-16 lg:py-28" />

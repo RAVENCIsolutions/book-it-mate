@@ -153,20 +153,23 @@ function PageHome() {
       <BgGlassmorphism />
 
       <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
-        {/* SECTION HERO */}
+        {/* HERO SECTION */}
         <SectionHero className="pt-10 lg:pt-16 lg:pb-16" />
 
-        {/* SECTION 1 */}
+        {/* DISCOVER */}
         <SectionSliderNewCategories categories={DEMO_CATS} />
 
+        {/* WHY BOOK IT MATE */}
         <SectionOurFeatures />
 
+        {/* FEATURED */}
         <SectionGridFeaturePlaces cardType="card2" />
 
+        {/* HOW IT WORKS */}
         <SectionHowItWork />
 
         <div className="relative py-16">
-          <BackgroundSection className="bg-orange-50 dark:bg-black/20" />
+          <BackgroundSection className="bg-primary-100 dark:bg-black/30" />
           <SectionSliderNewCategories
             categories={DEMO_CATS_2}
             categoryCardType="card4"
@@ -177,12 +180,14 @@ function PageHome() {
           />
         </div>
 
+        {/* NEWSLETTER */}
         <SectionSubscribe2 />
 
-        <div className="relative py-16">
-          <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
-          <SectionGridAuthorBox />
-        </div>
+        {/* TOP HOSTS */}
+        {/*<div className="relative py-16">*/}
+        {/*  <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />*/}
+        {/*  <SectionGridAuthorBox />*/}
+        {/*</div>*/}
 
         <SectionGridCategoryBox />
 
@@ -191,15 +196,18 @@ function PageHome() {
           <SectionBecomeAnAuthor />
         </div>
 
+        {/* BY TYPE */}
         <SectionSliderNewCategories
-          heading="Explore by types of stays"
-          subHeading="Explore houses based on 10 types of stays"
+          heading="Stay your way"
+          subHeading="Find the perfect stays that make your trip unforgettable"
           categoryCardType="card5"
           itemPerRow={5}
         />
 
-        <SectionVideos />
+        {/* VIDEOS */}
+        {/*<SectionVideos />*/}
 
+        {/* TESTIMONIALS */}
         <div className="relative py-16">
           <BackgroundSection />
           <SectionClientSay />

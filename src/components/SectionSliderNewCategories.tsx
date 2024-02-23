@@ -1,17 +1,21 @@
 "use client";
 
 import React, { FC, useEffect, useState } from "react";
+import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import { useSwipeable } from "react-swipeable";
+import { useWindowSize } from "react-use";
+
 import { TaxonomyType } from "@/data/types";
+
+import Heading from "@/shared/Heading";
 import CardCategory3 from "@/components/CardCategory3";
 import CardCategory4 from "@/components/CardCategory4";
 import CardCategory5 from "@/components/CardCategory5";
-import Heading from "@/shared/Heading";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import { useSwipeable } from "react-swipeable";
+
 import PrevBtn from "./PrevBtn";
 import NextBtn from "./NextBtn";
+
 import { variants } from "@/utils/animationVariants";
-import { useWindowSize } from "react-use";
 
 export interface SectionSliderNewCategoriesProps {
   className?: string;
@@ -100,8 +104,8 @@ const DEMO_CATS: TaxonomyType[] = [
 ];
 
 const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
-  heading = "Suggestions for discovery",
-  subHeading = "Popular places to recommends for you",
+  heading = "Discover Aussie Cities",
+  subHeading = "Popular destinations for all",
   className = "",
   itemClassName = "",
   categories = DEMO_CATS,
@@ -111,24 +115,24 @@ const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [numberOfItems, setNumberOfitem] = useState(0);
+  const [numberOfItems, setNumberOfItems] = useState(0);
 
   const windowWidth = useWindowSize().width;
   useEffect(() => {
     if (windowWidth < 320) {
-      return setNumberOfitem(1);
+      return setNumberOfItems(1);
     }
     if (windowWidth < 500) {
-      return setNumberOfitem(itemPerRow - 3);
+      return setNumberOfItems(itemPerRow - 3);
     }
     if (windowWidth < 1024) {
-      return setNumberOfitem(itemPerRow - 2);
+      return setNumberOfItems(itemPerRow - 2);
     }
     if (windowWidth < 1280) {
-      return setNumberOfitem(itemPerRow - 1);
+      return setNumberOfItems(itemPerRow - 1);
     }
 
-    setNumberOfitem(itemPerRow);
+    setNumberOfItems(itemPerRow);
   }, [itemPerRow, windowWidth]);
 
   function changeItemId(newVal: number) {
@@ -174,6 +178,7 @@ const SectionSliderNewCategories: FC<SectionSliderNewCategoriesProps> = ({
       <Heading desc={subHeading} isCenter={sliderStyle === "style2"}>
         {heading}
       </Heading>
+
       <MotionConfig
         transition={{
           x: { type: "spring", stiffness: 300, damping: 30 },

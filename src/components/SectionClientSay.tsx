@@ -117,9 +117,10 @@ const SectionClientSay: FC<SectionClientSayProps> = ({
 
   return (
     <div className={`nc-SectionClientSay relative ${className} `}>
-      <Heading desc="Let's see what people think of Chisfis" isCenter>
-        Good news from far away
+      <Heading desc="Don't take our word for it" isCenter type={`type2`}>
+        Hear what others are saying
       </Heading>
+
       <div className="relative md:mb-16 max-w-2xl mx-auto">
         {renderBg()}
         <Image className="mx-auto" src={clientSayMain} alt="" />

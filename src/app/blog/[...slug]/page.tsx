@@ -199,7 +199,7 @@ const Page = ({
             <span className="text-sm text-neutral-500 sm:text-base dark:text-neutral-300">
               There’s no stopping the tech giant. Apple now opens its 100th
               store in China.There’s no stopping the tech giant.
-              <a className="text-primary-600 font-medium ml-1" href="/">
+              <a className="text-primary-500 font-medium ml-1" href="/">
                 Readmore
               </a>
             </span>
