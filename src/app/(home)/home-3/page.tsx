@@ -5,7 +5,6 @@ import BgGlassmorphism from "@/components/BgGlassmorphism";
 import { TaxonomyType } from "@/data/types";
 import SectionGridAuthorBox from "@/components/SectionGridAuthorBox";
 import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
-import SectionHero3 from "@/app/(server-components)/SectionHero3";
 import CardCategory6 from "@/components/CardCategory6";
 import SectionGridFeaturePlaces from "@/components/SectionGridFeaturePlaces";
 
@@ -62,11 +61,6 @@ function PageHome3() {
     <main className="nc-PageHome3 relative overflow-hidden">
       {/* GLASSMOPHIN */}
       <BgGlassmorphism />
-
-      {/* SECTION HERO */}
-      <div className="container px-1 sm:px-4 mb-24 ">
-        <SectionHero3 className="" />
-      </div>
 
       <div className="container relative space-y-24 mb-24 ">
         {/* SECTION 1 */}
