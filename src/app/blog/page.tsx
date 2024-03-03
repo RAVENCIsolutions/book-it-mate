@@ -3,7 +3,7 @@ import { DEMO_POSTS } from "@/data/posts";
 import SectionAds from "./SectionAds";
 import SectionMagazine5 from "./SectionMagazine5";
 import SectionLatestPosts from "./SectionLatestPosts";
-import BgGlassmorphism from "@/components/BgGlassmorphism";
+import BgGlassMorphism from "@/components/BgGlassMorphism";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
 import Link from "next/link";
 
@@ -18,7 +18,7 @@ const BlogPage: React.FC = () => {
   return (
     <div className="nc-BlogPage overflow-hidden relative">
       {/* ======== BG GLASS ======== */}
-      <BgGlassmorphism />
+      <BgGlassMorphism />
 
       {/* ======== ALL SECTIONS ======== */}
       {/* ======= START CONTAINER ============= */}

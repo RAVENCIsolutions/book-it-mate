@@ -1,7 +1,7 @@
 import React from "react";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
 import BackgroundSection from "@/components/BackgroundSection";
-import BgGlassmorphism from "@/components/BgGlassmorphism";
+import BgGlassMorphism from "@/components/BgGlassMorphism";
 import { TaxonomyType } from "@/data/types";
 import SectionGridAuthorBox from "@/components/SectionGridAuthorBox";
 import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
@@ -60,7 +60,7 @@ function PageHome3() {
   return (
     <main className="nc-PageHome3 relative overflow-hidden">
       {/* GLASSMOPHIN */}
-      <BgGlassmorphism />
+      <BgGlassMorphism />
 
       <div className="container relative space-y-24 mb-24 ">
         {/* SECTION 1 */}

@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import SectionFounder from "./SectionFounder";
 import SectionStatistic from "./SectionStatistic";
 import SectionHero from "./SectionHero";
-import BgGlassmorphism from "@/components/BgGlassmorphism";
+import BgGlassMorphism from "@/components/BgGlassMorphism";
 import BackgroundSection from "@/components/BackgroundSection";
 import SectionClientSay from "@/components/SectionClientSay";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
@@ -14,7 +14,7 @@ const PageAbout: FC<PageAboutProps> = ({}) => {
   return (
     <div className={`nc-PageAbout overflow-hidden relative`}>
       {/* ======== BG GLASS ======== */}
-      <BgGlassmorphism />
+      <BgGlassMorphism />
 
       <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
         <SectionHero

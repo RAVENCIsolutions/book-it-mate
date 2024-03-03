@@ -1,5 +1,5 @@
 import BackgroundSection from "@/components/BackgroundSection";
-import BgGlassmorphism from "@/components/BgGlassmorphism";
+import BgGlassMorphism from "@/components/BgGlassMorphism";
 import SectionGridAuthorBox from "@/components/SectionGridAuthorBox";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
@@ -8,11 +8,10 @@ import React, { ReactNode } from "react";
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className={`nc-ListingStayPage relative `}>
-      <BgGlassmorphism />
+      <BgGlassMorphism />
 
       {/* SECTION HERO */}
-      <div className="container pt-10 pb-24 lg:pt-16 lg:pb-28">
-      </div>
+      <div className="container pt-10 pb-24 lg:pt-16 lg:pb-28"></div>
 
       {children}
 
