@@ -5,6 +5,7 @@ import SocialsList1 from "@/shared/SocialsList1";
 import { CustomLink } from "@/data/types";
 import React from "react";
 import FooterNav from "./FooterNav";
+import Link from "next/link";
 
 export interface WidgetFooterMenu {
   id: string;
@@ -87,8 +88,8 @@ const Footer: React.FC = () => {
     <>
       <FooterNav />
 
-      <div className="nc-Footer relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700">
-        <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
+      <section className="nc-Footer relative pt-18 lg:pt-20 pb-5 border-t border-neutral-200 dark:border-neutral-700">
+        <article className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
           <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
             <div className="col-span-2 md:col-span-1">
               <Logo />
@@ -98,8 +99,36 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {widgetMenus.map(renderWidgetMenuItem)}
-        </div>
-      </div>
+        </article>
+        <article className={`mt-20 container grid grid-cols-2 w-full`}>
+          <p className={`text-2xs opacity-40`}>
+            Copyright © 2024, Book it MATE.yeah w All rights reserved.
+          </p>
+          <ul className={`flex justify-end gap-x-8`}>
+            <li
+              className={`text-2xs opacity-40 hover:opacity-100 transition-all duration-300`}
+            >
+              <Link href={`/privacy-policy`} title={`Privacy Policy`}>
+                Privacy Policy
+              </Link>
+            </li>
+            <li
+              className={`text-2xs opacity-40 hover:opacity-100 transition-all duration-300`}
+            >
+              <Link href={`/terms-of-service`} title={`Terms of Service`}>
+                Terms of Service
+              </Link>
+            </li>
+            <li
+              className={`text-2xs opacity-40 hover:opacity-100 transition-all duration-300`}
+            >
+              <Link href={`/cookies-policy`} title={`Cookies Policy`}>
+                Cookies Policy
+              </Link>
+            </li>
+          </ul>
+        </article>
+      </section>
     </>
   );
 };

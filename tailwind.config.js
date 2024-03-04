@@ -26,10 +26,6 @@ module.exports = {
         "2xl": "128px",
       },
     },
-    // fontFamily: {
-    //   display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
-    //   body: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
-    // },
 
     extend: {
       colors: {
@@ -88,6 +84,9 @@ module.exports = {
           800: "#520526",
           900: "#440325",
         },
+      },
+      fontSize: {
+        "2xs": ["0.625rem", { lineHeight: "0.75rem" }],
       },
     },
   },

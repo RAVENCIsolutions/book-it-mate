@@ -41,7 +41,7 @@ export default function RootLayout({
           <ClientCommons />
           <SiteHeader />
           {children}
-          <FooterNav />
+          {/*<FooterNav />*/}
           <Footer />
         </body>
       </html>
