@@ -16,9 +16,9 @@ export interface WidgetFooterMenu {
 const widgetMenus: WidgetFooterMenu[] = [
   {
     id: "5",
-    title: "Getting started",
+    title: "About",
     menus: [
-      { href: "#", label: "Installation" },
+      { href: "#", label: "About Us" },
       { href: "#", label: "Release Notes" },
       { href: "#", label: "Upgrade Guide" },
       { href: "#", label: "Browser Support" },
