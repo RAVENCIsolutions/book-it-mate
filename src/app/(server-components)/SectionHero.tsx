@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 
-import imagePng from "@/images/hero-right.png";
+import imagePng from "@/images/australian-travel-locations-hero-image.png";
 
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import HeroSearchForm from "../(client-components)/(HeroSearchForm)/HeroSearchForm";

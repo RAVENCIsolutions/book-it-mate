@@ -32,37 +32,37 @@ const SectionOurFeatures: FC<SectionOurFeaturesProps> = ({
         <span className="uppercase text-sm text-gray-400 tracking-widest">
           Why Book It Mate?
         </span>
-        <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
+        <h2 className="font-semibold text-4xl mt-1">
+          Experience the Local Advantage
+        </h2>
 
         <ul className="space-y-10 mt-16">
           <li className="space-y-4">
             <Badge name="Advertising" />
             <span className="block text-xl font-semibold">
-              Cost-effective advertising
+              Authentically Australian
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              With a free listing, you can advertise your rental with no upfront
-              costs
+              We are your local guide to the best accommodations down under
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="green" name="Exposure " />
             <span className="block text-xl font-semibold">
-              Reach millions with Chisfis
+              On-the-Ground Support
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              Millions of people are searching for unique places to stay around
-              the world
+              Get the help you need as easy as enjoying your holiday
             </span>
           </li>
           <li className="space-y-4">
             <Badge color="red" name="Secure" />
             <span className="block text-xl font-semibold">
-              Secure and simple
+              Expert Recommendations
             </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-              A Holiday Lettings listing gives you a secure and easy way to take
-              bookings and payments online
+              Leverage our local knowledge for personalized accommodation
+              choices
             </span>
           </li>
         </ul>

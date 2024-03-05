@@ -1,42 +1,43 @@
 import { SocialType } from "@/shared/SocialsShare";
 import React, { FC } from "react";
 
-export interface SocialsListProps {
+export interface SocialsList1Props {
   className?: string;
-  itemClass?: string;
-  socials?: SocialType[];
 }
 
-const socialsDemo: SocialType[] = [
-  { name: "Facebook", icon: "lab la-facebook-square", href: "#" },
-  { name: "Twitter", icon: "lab la-twitter", href: "#" },
-  { name: "Youtube", icon: "lab la-youtube", href: "#" },
-  { name: "Instagram", icon: "lab la-instagram", href: "#" },
+const socials: SocialType[] = [
+  {
+    name: "Facebook",
+    icon: "lab la-facebook-square",
+    href: "https://www.facebook.com/profile.php?id=100064104784515",
+  },
+  {
+    name: "Instagram",
+    icon: "lab la-instagram",
+    href: "https://www.instagram.com/bookitmate/",
+  },
+  // { name: "Twitter", icon: "lab la-twitter", href: "#" },
+  // { name: "Youtube", icon: "lab la-youtube", href: "#" },
 ];
 
-const SocialsList: FC<SocialsListProps> = ({
-  className = "",
-  itemClass = "block",
-  socials = socialsDemo,
-}) => {
+const SocialsList: FC<SocialsList1Props> = ({ className = "space-y-2.5" }) => {
+  const renderItem = (item: SocialType, index: number) => {
+    return (
+      <a
+        href={item.href}
+        className="flex items-center text-2xl text-neutral-400 hover:text-black dark:text-neutral-400 dark:hover:text-white leading-none space-x-2 group transition-all duration-300"
+        key={index}
+      >
+        <i className={item.icon}></i>
+        <span className="hidden lg:block text-sm">{item.name}</span>
+      </a>
+    );
+  };
+
   return (
-    <nav
-      className={`nc-SocialsList flex space-x-2.5 text-2xl text-neutral-600 dark:text-neutral-300 ${className}`}
-      data-nc-id="SocialsList"
-    >
-      {socials.map((item, i) => (
-        <a
-          key={i}
-          className={`${itemClass}`}
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          title={item.name}
-        >
-          <i className={item.icon}></i>
-        </a>
-      ))}
-    </nav>
+    <div className={`nc-SocialsList1 ${className}`} data-nc-id="SocialsList1">
+      {socials.map(renderItem)}
+    </div>
   );
 };
 

@@ -27,8 +27,8 @@ const Logo: React.FC<LogoProps> = ({
       href="/"
       className={`ttnc-logo inline-block text-primary-500 focus:outline-none focus:ring-0 ${className}`}
     >
-      <HeaderLogo className={`block dark:hidden max-h-12`} />
-      <HeaderLogoLight className={`hidden dark:block max-h-12`} />
+      <HeaderLogo className={`block dark:hidden w-full max-h-12`} />
+      <HeaderLogoLight className={`hidden dark:block w-full max-h-12`} />
     </Link>
   );
 };
