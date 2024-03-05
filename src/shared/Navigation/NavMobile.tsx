@@ -12,6 +12,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import SwitchDarkMode from "@/shared/SwitchDarkMode";
 import Link from "next/link";
 import LangDropdown from "@/app/(client-components)/(Header)/LangDropdown";
+import AuthorSocialsList from "@/shared/AuthorSocialsList";
 
 export interface NavMobileProps {
   data?: NavItemType[];
@@ -114,7 +115,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
           </span>
 
           <div className="flex justify-between items-center mt-4">
-            <SocialsList itemClass="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-100 text-xl dark:bg-neutral-800 dark:text-neutral-300" />
+            <AuthorSocialsList itemClass="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-100 text-xl dark:bg-neutral-800 dark:text-neutral-300" />
             <span className="block">
               <SwitchDarkMode className="bg-neutral-100 dark:bg-neutral-800" />
             </span>

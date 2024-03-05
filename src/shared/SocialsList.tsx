@@ -1,7 +1,7 @@
 import { SocialType } from "@/shared/SocialsShare";
 import React, { FC } from "react";
 
-export interface SocialsList1Props {
+export interface SocialsListProps {
   className?: string;
 }
 
@@ -20,7 +20,7 @@ const socials: SocialType[] = [
   // { name: "Youtube", icon: "lab la-youtube", href: "#" },
 ];
 
-const SocialsList: FC<SocialsList1Props> = ({ className = "space-y-2.5" }) => {
+const SocialsList: FC<SocialsListProps> = ({ className = "space-y-2.5" }) => {
   const renderItem = (item: SocialType, index: number) => {
     return (
       <a

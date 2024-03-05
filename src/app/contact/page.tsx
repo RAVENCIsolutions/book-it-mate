@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
-import SocialsList from "@/shared/SocialsList";
+import AuthorSocialsList from "@/shared/AuthorSocialsList";
 import Label from "@/components/Label";
 import Input from "@/shared/Input";
 import Textarea from "@/shared/Textarea";
@@ -47,7 +47,7 @@ const PageContact: FC<PageContactProps> = ({}) => {
                 <h3 className="uppercase font-semibold text-sm dark:text-neutral-200 tracking-wider">
                   🌏 SOCIALS
                 </h3>
-                <SocialsList className="mt-2" />
+                <AuthorSocialsList className="mt-2" />
               </div>
             </div>
             <div>

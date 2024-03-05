@@ -14,7 +14,7 @@ import {
 import React, { FC, Fragment, useState } from "react";
 import Avatar from "@/shared/Avatar";
 import ButtonSecondary from "@/shared/ButtonSecondary";
-import SocialsList from "@/shared/SocialsList";
+import AuthorSocialsList from "@/shared/AuthorSocialsList";
 
 export interface AuthorPageProps {}
 
@@ -30,20 +30,18 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
           sizeClass="w-28 h-28"
         />
 
-        {/* ---- */}
         <div className="space-y-3 text-center flex flex-col items-center">
           <h2 className="text-3xl font-semibold">Kevin Francis</h2>
           <StartRating className="!text-base" />
         </div>
 
-        {/* ---- */}
         <p className="text-neutral-500 dark:text-neutral-400">
           Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides
           accommodation, an outdoor.
         </p>
 
         {/* ---- */}
-        <SocialsList
+        <AuthorSocialsList
           className="!space-x-3"
           itemClass="flex items-center justify-center w-9 h-9 rounded-full bg-neutral-100 dark:bg-neutral-800 text-xl"
         />

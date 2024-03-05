@@ -6,7 +6,7 @@ import Badge from "@/shared/Badge";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import ButtonSecondary from "@/shared/ButtonSecondary";
 import Comment from "@/shared/Comment";
-import SocialsList from "@/shared/SocialsList";
+import AuthorSocialsList from "@/shared/AuthorSocialsList";
 import Textarea from "@/shared/Textarea";
 import Image from "next/image";
 import travelhero2Image from "@/images/travelhero2.png";
@@ -62,7 +62,7 @@ const Page = ({
               </div>
             </div>
             <div className="mt-3 sm:mt-0 sm:ml-3">
-              <SocialsList />
+              <AuthorSocialsList />
             </div>
           </div>
         </div>
