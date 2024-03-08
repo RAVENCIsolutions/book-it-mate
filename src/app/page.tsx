@@ -12,69 +12,62 @@ import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
 import SectionBecomeAnAuthor from "@/components/SectionBecomeAnAuthor";
 import SectionClientSay from "@/components/SectionClientSay";
 
-const DEMO_CATS: TaxonomyType[] = [
+const CITIES: TaxonomyType[] = [
   {
     id: "1",
     href: "/listing-stay-map",
-    name: "New York",
+    name: "Gold Coast",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    thumbnail: "/categories/category-gold-coast.jpg",
   },
   {
     id: "2",
     href: "/listing-stay-map",
-    name: "Singapore",
+    name: "Sydney",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    thumbnail: "/categories/category-sydney.jpg",
   },
   {
     id: "3",
     href: "/listing-stay-map",
-    name: "Paris",
+    name: "Melbourne",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    thumbnail: "/categories/category-melbourne.jpg",
   },
   {
     id: "4",
     href: "/listing-stay-map",
-    name: "London",
+    name: "Brisbane",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    thumbnail: "/categories/category-brisbane.jpg",
   },
   {
     id: "5",
     href: "/listing-stay-map",
-    name: "Tokyo",
+    name: "Perth",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/4151484/pexels-photo-4151484.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    thumbnail: "/categories/category-perth.jpg",
   },
   {
     id: "6",
     href: "/listing-stay-map",
-    name: "Maldives",
+    name: "Hobart",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/3250613/pexels-photo-3250613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    thumbnail: "/categories/category-hobart.jpg",
   },
   {
     id: "7",
     href: "/listing-stay-map",
-    name: "Italy",
+    name: "Cairns",
     taxonomy: "category",
     count: 188288,
-    thumbnail:
-      "https://images.pexels.com/photos/7740160/pexels-photo-7740160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    thumbnail: "/categories/category-cairns.jpg",
   },
 ];
 
@@ -155,7 +148,7 @@ function PageHome() {
         <SectionHero className="pt-10 lg:pt-16 lg:pb-16" />
 
         {/* DISCOVER */}
-        <SectionSliderNewCategories categories={DEMO_CATS} />
+        <SectionSliderNewCategories categories={CITIES} />
 
         {/* WHY BOOK IT MATE */}
         <SectionOurFeatures />
@@ -164,7 +157,7 @@ function PageHome() {
         <SectionGridFeaturePlaces cardType="card2" />
 
         {/* HOW IT WORKS */}
-        <SectionHowItWork />
+        {/*<SectionHowItWork />*/}
 
         <div className="relative py-16">
           <BackgroundSection className="bg-primary-100 dark:bg-black/30" />
@@ -187,12 +180,12 @@ function PageHome() {
         {/*  <SectionGridAuthorBox />*/}
         {/*</div>*/}
 
-        <SectionGridCategoryBox />
+        {/*<SectionGridCategoryBox />*/}
 
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionBecomeAnAuthor />
-        </div>
+        {/*<div className="relative py-16">*/}
+        {/*  <BackgroundSection />*/}
+        {/*  <SectionBecomeAnAuthor />*/}
+        {/*</div>*/}
 
         {/* BY TYPE */}
         <SectionSliderNewCategories
@@ -206,10 +199,10 @@ function PageHome() {
         {/*<SectionVideos />*/}
 
         {/* TESTIMONIALS */}
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionClientSay />
-        </div>
+        {/*<div className="relative py-16">*/}
+        {/*  <BackgroundSection />*/}
+        {/*  <SectionClientSay />*/}
+        {/*</div>*/}
       </div>
     </main>
   );

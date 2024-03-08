@@ -31,7 +31,7 @@ const SectionHero: FC<SectionHeroProps> = ({ className = "" }) => {
             It Mate, your gateway to unforgettable holiday experiences
           </span>
           <ButtonPrimary href="/listing-stay-map" sizeClass="px-5 py-4 sm:px-7">
-            Start your search
+            Start Exploring
           </ButtonPrimary>
         </div>
         <div className="flex-grow">

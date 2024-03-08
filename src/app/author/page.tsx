@@ -19,7 +19,7 @@ import AuthorSocialsList from "@/shared/AuthorSocialsList";
 export interface AuthorPageProps {}
 
 const AuthorPage: FC<AuthorPageProps> = ({}) => {
-  let [categories] = useState(["Stays", "Experiences", "Car for rent"]);
+  let [categories] = useState(["Accommodations"]);
 
   const renderSidebar = () => {
     return (
@@ -40,16 +40,13 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
           accommodation, an outdoor.
         </p>
 
-        {/* ---- */}
         <AuthorSocialsList
           className="!space-x-3"
           itemClass="flex items-center justify-center w-9 h-9 rounded-full bg-neutral-100 dark:bg-neutral-800 text-xl"
         />
 
-        {/* ---- */}
         <div className="border-b border-neutral-200 dark:border-neutral-700 w-14"></div>
 
-        {/* ---- */}
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <svg
@@ -128,26 +125,26 @@ const AuthorPage: FC<AuthorPageProps> = ({}) => {
 
         <div>
           <Tab.Group>
-            <Tab.List className="flex space-x-1 overflow-x-auto">
-              {categories.map((item) => (
-                <Tab key={item} as={Fragment}>
-                  {({ selected }) => (
-                    <button
-                      className={`flex-shrink-0 block !leading-none font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full focus:outline-none ${
-                        selected
-                          ? "bg-secondary-900 text-secondary-50 "
-                          : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                      } `}
-                    >
-                      {item}
-                    </button>
-                  )}
-                </Tab>
-              ))}
-            </Tab.List>
+            {/*<Tab.List className="flex space-x-1 overflow-x-auto">*/}
+            {/*  {categories.map((item) => (*/}
+            {/*    <Tab key={item} as={Fragment}>*/}
+            {/*      {({ selected }) => (*/}
+            {/*        <button*/}
+            {/*          className={`flex-shrink-0 block !leading-none font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full focus:outline-none ${*/}
+            {/*            selected*/}
+            {/*              ? "bg-secondary-900 text-secondary-50 "*/}
+            {/*              : "text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"*/}
+            {/*          } `}*/}
+            {/*        >*/}
+            {/*          {item}*/}
+            {/*        </button>*/}
+            {/*      )}*/}
+            {/*    </Tab>*/}
+            {/*  ))}*/}
+            {/*</Tab.List>*/}
             <Tab.Panels>
               <Tab.Panel className="">
-                <div className="mt-8 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
+                <div className="mt-1 grid grid-cols-1 gap-6 md:gap-7 sm:grid-cols-2">
                   {DEMO_STAY_LISTINGS.filter((_, i) => i < 4).map((stay) => (
                     <StayCard key={stay.id} data={stay} />
                   ))}
