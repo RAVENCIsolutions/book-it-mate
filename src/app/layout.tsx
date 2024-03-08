@@ -11,7 +11,6 @@ import SiteHeader from "./(client-components)/(Header)/SiteHeader";
 import ClientCommons from "./ClientCommons";
 import Footer from "@/components/Footer";
 import FooterNav from "@/components/FooterNav";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,19 +31,14 @@ export default function RootLayout({
   params: any;
 }) {
   return (
-    <ClerkProvider
-      signInUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL}
-      signUpUrl={process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}
-    >
-      <html lang="en" className={poppins.className}>
-        <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-          <ClientCommons />
-          <SiteHeader />
-          {children}
-          {/*<FooterNav />*/}
-          <Footer />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" className={poppins.className}>
+      <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
+        <ClientCommons />
+        <SiteHeader />
+        {children}
+        {/*<FooterNav />*/}
+        <Footer />
+      </body>
+    </html>
   );
 }

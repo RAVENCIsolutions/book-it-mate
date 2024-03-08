@@ -46,9 +46,9 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "4",
     title: "Support",
     menus: [
-      { href: "#", label: "FAQ" },
+      { href: "/help-center/faq", label: "FAQ" },
       { href: "#", label: "Help Center" },
-      { href: "#", label: "Cancellation Policy" },
+      { href: "/cancellation-policy", label: "Cancellation Policy" },
       { href: "#", label: "Contact Us" },
     ],
   },
