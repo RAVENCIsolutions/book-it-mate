@@ -1,6 +1,5 @@
 import { avatarColors } from "@/contains/contants";
 import React, { FC } from "react";
-import avatar1 from "@/images/avatars/Image-1.png";
 import Image, { StaticImageData } from "next/image";
 
 export interface AvatarProps {
@@ -17,7 +16,7 @@ const Avatar: FC<AvatarProps> = ({
   containerClassName = "ring-1 ring-white dark:ring-neutral-900",
   sizeClass = "h-6 w-6 text-sm",
   radius = "rounded-full",
-  imgUrl = avatar1,
+  imgUrl = "https://i.pravatar.cc/200",
   userName,
   hasChecked,
   hasCheckedClass = "w-4 h-4 -top-0.5 -right-0.5",
@@ -26,7 +25,7 @@ const Avatar: FC<AvatarProps> = ({
   const name = userName || "John Doe";
   const _setBgColor = (name: string) => {
     const backgroundIndex = Math.floor(
-      name.charCodeAt(0) % avatarColors.length
+      name.charCodeAt(0) % avatarColors.length,
     );
     return avatarColors[backgroundIndex];
   };
@@ -39,6 +38,8 @@ const Avatar: FC<AvatarProps> = ({
       {url && (
         <Image
           className={`absolute inset-0 w-full h-full object-cover ${radius}`}
+          width={100}
+          height={100}
           src={url}
           alt={name}
         />
