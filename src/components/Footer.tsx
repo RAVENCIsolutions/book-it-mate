@@ -18,28 +18,28 @@ const widgetMenus: WidgetFooterMenu[] = [
     id: "1",
     title: "About",
     menus: [
-      { href: "#", label: "Our Story" },
-      { href: "#", label: "Careers" },
-      { href: "#", label: "Press & Media" },
+      { href: "/about", label: "Our Story" },
+      // { href: "/careers", label: "Careers" },
+      // { href: "/press-and-media", label: "Press & Media" },
     ],
   },
   {
     id: "2",
     title: "Discover",
     menus: [
-      { href: "#", label: "Blog" },
-      { href: "#", label: "Destinations" },
-      { href: "#", label: "Travel Guides" },
-      { href: "#", label: "Tips & Advice" },
+      { href: "/blog", label: "Blog" },
+      { href: "/blog/destinations", label: "Destinations" },
+      { href: "/blog/travel-guides", label: "Travel Guides" },
+      { href: "/blog/tips-and-advice", label: "Tips & Advice" },
     ],
   },
   {
     id: "3",
     title: "Partners",
     menus: [
-      { href: "#", label: "List Your Property" },
-      { href: "#", label: "Share a Review" },
-      { href: "#", label: "Write an Article" },
+      { href: "/add-listing", label: "List Your Property" },
+      { href: "/write-an-article", label: "Write an Article" },
+      // { href: "/share-review", label: "Share a Review" },
     ],
   },
   {
@@ -47,9 +47,9 @@ const widgetMenus: WidgetFooterMenu[] = [
     title: "Support",
     menus: [
       { href: "/help-center/faq", label: "FAQ" },
-      { href: "#", label: "Help Center" },
+      { href: "/help-center", label: "Help Center" },
       { href: "/cancellation-policy", label: "Cancellation Policy" },
-      { href: "#", label: "Contact Us" },
+      { href: "/help-center/contact-us", label: "Contact Us" },
     ],
   },
 ];

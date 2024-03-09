@@ -1,11 +1,13 @@
 import React from "react";
+import Link from "next/link";
+
 import { DEMO_POSTS } from "@/data/posts";
+
 import SectionAds from "./SectionAds";
 import SectionMagazine5 from "./SectionMagazine5";
 import SectionLatestPosts from "./SectionLatestPosts";
 import BgGlassMorphism from "@/components/BgGlassMorphism";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
-import Link from "next/link";
 
 // DEMO DATA
 const POSTS = DEMO_POSTS;
@@ -33,8 +35,8 @@ const BlogPage: React.FC = () => {
             Want to contribute to our magazine?
           </p>
           <Link
+            href={`/write-an-article`}
             className={`text-secondary-500 font-bold tracking-wider uppercase`}
-            href={`/`}
           >
             Let us know
           </Link>
