@@ -7,7 +7,6 @@ import { Disclosure } from "@headlessui/react";
 import { NavItemType } from "./NavigationItem";
 import { NAVIGATION_DEMO } from "@/data/navigation";
 import ButtonPrimary from "@/shared/ButtonPrimary";
-import SocialsList from "@/shared/SocialsList";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import SwitchDarkMode from "@/shared/SwitchDarkMode";
 import Link from "next/link";

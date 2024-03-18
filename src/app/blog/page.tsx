@@ -30,7 +30,7 @@ const BlogPage: React.FC = () => {
           <SectionMagazine5 posts={MAGAZINE1_POSTS} />
         </div>
 
-        <div className={`pt-10 pb-6 bg-primary-500 rounded-3xl text-center`}>
+        <div className={`py-10 bg-primary-500 rounded-3xl text-center`}>
           <p className={`text-xl text-white`}>
             Want to contribute to our magazine?
           </p>
