@@ -1,7 +1,6 @@
-import React from "react";
+import { TaxonomyType } from "@/data/types";
 import SectionHero from "@/app/(server-components)/SectionHero";
 import BgGlassMorphism from "@/components/BgGlassMorphism";
-import { TaxonomyType } from "@/data/types";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
 import SectionOurFeatures from "@/components/SectionOurFeatures";
 import BackgroundSection from "@/components/BackgroundSection";
@@ -11,65 +10,8 @@ import SectionSubscribe2 from "@/components/SectionSubscribe2";
 import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
 import SectionBecomeAnAuthor from "@/components/SectionBecomeAnAuthor";
 import SectionClientSay from "@/components/SectionClientSay";
-
-const CITIES: TaxonomyType[] = [
-  {
-    id: "1",
-    href: "/listing-stay-map",
-    name: "Gold Coast",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-gold-coast.jpg",
-  },
-  {
-    id: "2",
-    href: "/listing-stay-map",
-    name: "Sydney",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-sydney.jpg",
-  },
-  {
-    id: "3",
-    href: "/listing-stay-map",
-    name: "Melbourne",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-melbourne.jpg",
-  },
-  {
-    id: "4",
-    href: "/listing-stay-map",
-    name: "Brisbane",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-brisbane.jpg",
-  },
-  {
-    id: "5",
-    href: "/listing-stay-map",
-    name: "Perth",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-perth.jpg",
-  },
-  {
-    id: "6",
-    href: "/listing-stay-map",
-    name: "Hobart",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-hobart.jpg",
-  },
-  {
-    id: "7",
-    href: "/listing-stay-map",
-    name: "Cairns",
-    taxonomy: "category",
-    count: 188288,
-    thumbnail: "/categories/category-cairns.jpg",
-  },
-];
+import CITIES from "@/data/featured-cities";
+import STAYS from "@/data/featured-stays";
 
 const DEMO_CATS_2: TaxonomyType[] = [
   {
@@ -154,7 +96,11 @@ function PageHome() {
         <SectionOurFeatures />
 
         {/* FEATURED */}
-        <SectionGridFeaturePlaces cardType="card2" />
+        <SectionGridFeaturePlaces
+          cardType="card2"
+          heading={"Holiday where it suits you best"}
+          subHeading={"Explore Australia's most popular cities"}
+        />
 
         {/* HOW IT WORKS */}
         {/*<SectionHowItWork />*/}
@@ -162,11 +108,11 @@ function PageHome() {
         <div className="relative py-16">
           <BackgroundSection className="bg-primary-100 dark:bg-black/30" />
           <SectionSliderNewCategories
-            categories={DEMO_CATS_2}
+            categories={STAYS}
             categoryCardType="card4"
             itemPerRow={4}
-            heading="Suggestions for discovery"
-            subHeading="Popular places to stay that Chisfis recommends for you"
+            heading="Stay away, your way"
+            subHeading="Popular accommodation types that are just right"
             sliderStyle="style2"
           />
         </div>
@@ -188,12 +134,12 @@ function PageHome() {
         {/*</div>*/}
 
         {/* BY TYPE */}
-        <SectionSliderNewCategories
-          heading="Stay your way"
-          subHeading="Find the perfect stays that make your trip unforgettable"
-          categoryCardType="card5"
-          itemPerRow={5}
-        />
+        {/*<SectionSliderNewCategories*/}
+        {/*  heading="Stay your way"*/}
+        {/*  subHeading="Find the perfect stays that make your trip unforgettable"*/}
+        {/*  categoryCardType="card5"*/}
+        {/*  itemPerRow={5}*/}
+        {/*/>*/}
 
         {/* VIDEOS */}
         {/*<SectionVideos />*/}

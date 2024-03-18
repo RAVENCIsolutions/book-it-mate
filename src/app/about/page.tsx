@@ -16,22 +16,20 @@ const PageAbout: FC<PageAboutProps> = ({}) => {
       {/* ======== BG GLASS ======== */}
       <BgGlassMorphism />
 
-      <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
+      <div className="container mb-20 lg:mb-28 pt-16 lg:pt-28 space-y-16 lg:space-y-28">
         <SectionHero
           rightImg={rightImg}
           heading="👋 About Us."
           btnText=""
-          subHeading="We’re impartial and independent, and every day we create distinctive, world-class programmes and content which inform, educate and entertain millions of people in the around the world."
+          subHeading={``}
         />
 
-        <SectionFounder />
         <div className="relative py-16">
           <BackgroundSection />
-          <SectionClientSay />
+          <SectionFounder />
         </div>
 
-        <SectionStatistic />
-
+        {/*  <SectionStatistic />*/}
         <SectionSubscribe2 />
       </div>
     </div>

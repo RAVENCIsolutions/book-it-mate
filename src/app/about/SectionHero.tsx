@@ -33,6 +33,15 @@ const SectionHero: FC<SectionHeroProps> = ({
           <Image className="w-full" src={rightImg} alt="" />
         </div>
       </div>
+
+      <span className="mx-auto my-20 block max-w-3xl text-sm xl:text-base text-neutral-600 dark:text-neutral-400 italic text-center">
+        “We acknowledge Aboriginal & Torres Strait Islander Peoples as the first
+        peoples of Australia and pay our respects to Elders past, present &
+        emerging. We acknowledge all Indigenous Australians and their continuing
+        connection to Country, Culture and Community. We recognize their
+        invaluable contributions in our mission for Australia to be known as the
+        most desirable and memorable destination on earth.”
+      </span>
     </div>
   );
 };

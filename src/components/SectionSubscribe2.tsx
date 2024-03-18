@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import ButtonCircle from "@/shared/ButtonCircle";
-import rightImg from "@/images/SVG-subcribe2.png";
+import rightImg from "@/images/newsletter.png";
 import Badge from "@/shared/Badge";
 import Input from "@/shared/Input";
 import Image from "next/image";
@@ -12,26 +12,25 @@ export interface SectionSubscribe2Props {
 const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
   return (
     <div
-      className={`nc-SectionSubscribe2 relative flex flex-col lg:flex-row lg:items-center ${className}`}
+      className={`relative flex flex-col lg:flex-row lg:items-center ${className}`}
       data-nc-id="SectionSubscribe2"
     >
       <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
         <h2 className="font-semibold text-4xl">Join our newsletter 🎉</h2>
         <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-          Read and share new perspectives on just about any topic. Everyone’s
-          welcome.
+          Don't miss out on our latest news and amazing goodies.
         </span>
         <ul className="space-y-4 mt-10">
           <li className="flex items-center space-x-4">
             <Badge name="01" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-              Get more discount
+              Be in-the-know about upcoming sales
             </span>
           </li>
           <li className="flex items-center space-x-4">
             <Badge color="red" name="02" />
             <span className="font-medium text-neutral-700 dark:text-neutral-300">
-              Get premium magazines
+              Get holidaying tips right to your inbox
             </span>
           </li>
         </ul>
