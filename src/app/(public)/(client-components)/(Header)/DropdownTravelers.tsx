@@ -31,7 +31,7 @@ const solutions: SolutionItem[] = [
   {
     name: "Travel Guides",
     description: "The hottest tips and spots",
-    href: "/blog/travelshee-guides",
+    href: "/blog/travel-guides",
     icon: IconTwo,
   },
   {
@@ -62,6 +62,7 @@ export default function DropdownTravelers() {
               />
             </div>
           </Popover.Button>
+          <Popover.Overlay className="fixed w-screen h-screen inset-0 bg-neutral-800/50" />
           <Transition
             as={Fragment}
             enter="transition ease-out duration-200"
@@ -79,9 +80,9 @@ export default function DropdownTravelers() {
                       key={index}
                       href={item.href}
                       onClick={() => close()}
-                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${
+                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${
                         path === item.href
-                          ? "bg-neutral-100 dark:bg-neutral-700"
+                          ? "bg-neutral-200 dark:bg-neutral-700"
                           : ""
                       }`}
                     >
@@ -100,7 +101,7 @@ export default function DropdownTravelers() {
                 {/* FOOTER */}
                 <Link
                   href="/auth?type=signup"
-                  className="group p-4 bg-neutral-50 dark:bg-neutral-700 hover:bg-secondary-500 hover:dark:bg-secondary-600 flow-root space-y-0.5 transition duration-150 ease-in-out rounded-md focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                  className="group p-4 bg-neutral-50 dark:bg-neutral-700 hover:bg-secondary-500 hover:dark:bg-secondary-600 flow-root space-y-0.5 transition duration-150 ease-in-out focus:outline-none"
                 >
                   <div className="px-2 py-2">
                     <span className="flex items-center">
