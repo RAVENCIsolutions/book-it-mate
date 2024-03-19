@@ -1,12 +1,16 @@
 ﻿"use client";
 
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import { useState } from "react";
 
 import AuthText from "@/components/AuthText";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 const SignUp = () => {
+  const searchParams = useSearchParams();
+  const emailParam = searchParams.get("email");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +21,12 @@ const SignUp = () => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
+
+  useEffect(() => {
+    if (emailParam && emailParam.length > 0) {
+      setFormData({ ...formData, email: emailParam });
+    }
+  }, []);
 
   return (
     <section className={`w-full`}>
