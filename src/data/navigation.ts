@@ -87,7 +87,7 @@ const otherPageChildMenus: NavItemType[] = [
   { id: ncNanoId(), href: "/about", name: "About" },
   { id: ncNanoId(), href: "/contact", name: "Contact us" },
   { id: ncNanoId(), href: "/login", name: "Login" },
-  { id: ncNanoId(), href: "/signup", name: "Signup" },
+  { id: ncNanoId(), href: "/auth/signup", name: "Signup" },
 ];
 
 const templatesChildrenMenus: NavItemType[] = [

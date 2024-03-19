@@ -1,11 +1,14 @@
-﻿import { authMiddleware } from "@clerk/nextjs";
+﻿import { NextRequest, NextResponse } from "next/server";
 
 const protectedPaths = ["/account", "/add-listing"];
 
-export default authMiddleware({
-  publicRoutes: (req) =>
-    !protectedPaths.some((protectedPath) => req.url.includes(protectedPath)),
-});
+export function middleware(request: NextRequest) {
+  if (
+    protectedPaths.some((protectedPath) => request.url.includes(protectedPath))
+  ) {
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+}
 
 export const config = {
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],

@@ -43,6 +43,25 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/signup",
+        destination: "/auth",
+        permanent: false,
+      },
+      {
+        source: "/register",
+        destination: "/auth",
+        permanent: false,
+      },
+      {
+        source: "/login",
+        destination: "/auth",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = withMDX(nextConfig);

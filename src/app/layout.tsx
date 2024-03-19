@@ -7,11 +7,6 @@ import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/fonts/line-awesome-1.3.0/css/line-awesome.css";
 
-import SiteHeader from "./(client-components)/(Header)/SiteHeader";
-import ClientCommons from "./ClientCommons";
-import Footer from "@/components/Footer";
-import FooterNav from "@/components/FooterNav";
-
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -32,13 +27,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.className}>
-      <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-        <ClientCommons />
-        <SiteHeader />
-        {children}
-        {/*<FooterNav />*/}
-        <Footer />
-      </body>
+      <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
+      {children}
     </html>
   );
 }

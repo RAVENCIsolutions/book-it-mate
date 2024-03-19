@@ -1,15 +1,11 @@
 import { TaxonomyType } from "@/data/types";
-import SectionHero from "@/app/(server-components)/SectionHero";
+import SectionHero from "@/app/(public)/(server-components)/SectionHero";
 import BgGlassMorphism from "@/components/BgGlassMorphism";
 import SectionSliderNewCategories from "@/components/SectionSliderNewCategories";
 import SectionOurFeatures from "@/components/SectionOurFeatures";
 import BackgroundSection from "@/components/BackgroundSection";
 import SectionGridFeaturePlaces from "@/components/SectionGridFeaturePlaces";
-import SectionHowItWork from "@/components/SectionHowItWork";
 import SectionSubscribe2 from "@/components/SectionSubscribe2";
-import SectionGridCategoryBox from "@/components/SectionGridCategoryBox";
-import SectionBecomeAnAuthor from "@/components/SectionBecomeAnAuthor";
-import SectionClientSay from "@/components/SectionClientSay";
 import CITIES from "@/data/featured-cities";
 import STAYS from "@/data/featured-stays";
 
