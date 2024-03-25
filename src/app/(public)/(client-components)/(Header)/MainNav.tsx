@@ -35,9 +35,7 @@ const MainNav: FC<MainNavProps> = ({ className = "" }) => {
           <div className="hidden md:flex space-x-1">
             {/* Language and Currency Dropdown */}
             {/*<LangDropdown />*/}
-
             {/*<NotifyDropdown />*/}
-
             {/* Logged in vs Not Logged in */}
             <AvatarDropdown />
           </div>

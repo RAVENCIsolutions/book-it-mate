@@ -48,7 +48,7 @@ const Avatar: FC<AvatarProps> = ({
 
       {hasChecked && (
         <span
-          className={` bg-teal-500 rounded-full text-white text-xs flex items-center justify-center absolute  ${hasCheckedClass}`}
+          className={` bg-teal-500 rounded-full text-white text-xs flex items-center justify-center absolute ${hasCheckedClass}`}
         >
           <i className="las la-check"></i>
         </span>

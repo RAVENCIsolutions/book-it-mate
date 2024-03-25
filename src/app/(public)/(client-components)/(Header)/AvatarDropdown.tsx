@@ -104,9 +104,14 @@ export default function AvatarDropdown({ className = "" }: Props) {
           return (
             <>
               <Popover.Button
-                className={`self-center w-10 h-10 sm:w-12 sm:h-12 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none flex items-center justify-center`}
+                className={`pl-3 p-0.5 self-center flex items-center gap-3 bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 hover:dark:bg-neutral-600 rounded-full outline-none transition-all duration-150`}
               >
-                <Avatar sizeClass="w-8 h-8 sm:w-9 sm:h-9" />
+                <p className={`text-xs`}>Dashboard</p>
+                <div
+                  className={`p-1 flex items-center rounded-full text-slate-700 dark:text-slate-300 focus:outline-none`}
+                >
+                  <Avatar sizeClass="w-8 h-8 sm:w-9 sm:h-9" />
+                </div>
               </Popover.Button>
               <Popover.Overlay className="fixed w-screen h-screen inset-0 bg-neutral-800/50" />
               <Transition
