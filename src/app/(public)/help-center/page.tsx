@@ -25,7 +25,7 @@ export default function HelpCenterPage() {
               className={`group px-4 py-6 flex flex-col items-center gap-6 rounded-xl hover:bg-primary-500 text-primary-500 transition-all duration-300`}
             >
               <div
-                className={`w-9 h-9 grid place-content-center bg-neutral-200 dark:bg-neutral-600 group-hover:bg-neutral-50 rounded-full transition-all duration-300`}
+                className={`w-9 h-9 grid place-content-center bg-neutral-200 dark:bg-neutral-700 group-hover:bg-neutral-50 dark:text-neutral-100 group-hover:text-primary-500 rounded-full transition-all duration-300`}
               >
                 {icon}
               </div>

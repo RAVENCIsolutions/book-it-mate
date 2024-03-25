@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             <li key={index}>
               <a
                 key={index}
-                className="text-neutral-400 hover:text-black dark:hover:text-white transition-all duration-300"
+                className="text-neutral-400 hover:text-secondary-600 hover:dark:text-secondary-500 transition-all duration-300"
                 href={item.href}
               >
                 {item.label}
@@ -80,9 +80,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <FooterNav />
-
-      <section className="nc-Footer relative pt-18 lg:pt-20 pb-5 border-t border-neutral-200 dark:border-neutral-700">
+      <section className="relative pt-18 lg:pt-20 pb-5 border-t border-neutral-200 dark:border-neutral-700">
         <article className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 ">
           <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
             <div className="col-span-2 md:col-span-1">
@@ -94,29 +92,43 @@ const Footer: React.FC = () => {
           </div>
           {widgetMenus.map(renderWidgetMenuItem)}
         </article>
-        <article className={`mt-20 container grid grid-cols-2 w-full`}>
+        <article
+          className={`mt-20 container grid grid-cols-1 sm:grid-cols-2 gap-2 w-full`}
+        >
           <p className={`text-2xs text-neutral-400`}>
             Copyright © 2024, Book it MATE. All rights reserved.
           </p>
-          <ul className={`flex justify-end gap-x-8`}>
+          <ul className={`flex flex-col sm:flex-row justify-end gap-2 gap-x-8`}>
             <li
-              className={`text-2xs text-neutral-400 hover:text-black transition-all duration-300`}
+              className={`text-2xs text-neutral-400 transition-all duration-300`}
             >
-              <Link href={`/privacy-policy`} title={`Privacy Policy`}>
+              <Link
+                href={`/privacy-policy`}
+                className={`hover:text-secondary-600 hover:dark:text-secondary-500 transition-all duration-300`}
+                title={`Privacy Policy`}
+              >
                 Privacy Policy
               </Link>
             </li>
             <li
-              className={`text-2xs text-neutral-400 hover:text-black transition-all duration-300`}
+              className={`text-2xs text-neutral-400 transition-all duration-300`}
             >
-              <Link href={`/terms-of-service`} title={`Terms of Service`}>
+              <Link
+                href={`/terms-of-service`}
+                className={`hover:text-secondary-600 hover:dark:text-secondary-500 transition-all duration-300`}
+                title={`Terms of Service`}
+              >
                 Terms of Service
               </Link>
             </li>
             <li
-              className={`text-2xs text-neutral-400 hover:text-black transition-all duration-300`}
+              className={`text-2xs text-neutral-400 transition-all duration-300`}
             >
-              <Link href={`/cookies-policy`} title={`Cookies Policy`}>
+              <Link
+                href={`/cookies-policy`}
+                className={`hover:text-secondary-600 hover:dark:text-secondary-500 transition-all duration-300`}
+                title={`Cookies Policy`}
+              >
                 Cookies Policy
               </Link>
             </li>
