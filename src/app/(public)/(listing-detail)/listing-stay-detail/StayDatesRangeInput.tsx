@@ -6,7 +6,7 @@ import { CalendarIcon } from "@heroicons/react/24/outline";
 import DatePickerCustomHeaderTwoMonth from "@/components/DatePickerCustomHeaderTwoMonth";
 import DatePickerCustomDay from "@/components/DatePickerCustomDay";
 import DatePicker from "react-datepicker";
-import ClearDataButton from "@/app/(client-components)/(HeroSearchForm)/ClearDataButton";
+import ClearDataButton from "@/app/(public)/(client-components)/(HeroSearchForm)/ClearDataButton";
 
 export interface StayDatesRangeInputProps {
   className?: string;
@@ -16,7 +16,7 @@ const StayDatesRangeInput: FC<StayDatesRangeInputProps> = ({
   className = "flex-1",
 }) => {
   const [startDate, setStartDate] = useState<Date | null>(
-    new Date("2023/02/06")
+    new Date("2023/02/06"),
   );
   const [endDate, setEndDate] = useState<Date | null>(new Date("2023/02/23"));
   //

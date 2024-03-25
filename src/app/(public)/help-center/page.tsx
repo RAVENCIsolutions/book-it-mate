@@ -17,7 +17,7 @@ export default function HelpCenterPage() {
         Find out how we can help you make the most of Book It MATE
       </h2>
       <section
-        className={`mt-14 mb-6 mx-auto grid grid-cols-3 gap-10 w-full max-w-3xl`}
+        className={`mt-14 px-4 mb-6 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full max-w-3xl`}
       >
         {HELP_PAGES.map(
           ({ id, path, title, description, callToAction, icon }, index) => (
